@@ -1,2 +1,1 @@
-Once upon a time
-there was a wicked witch
+Initial commit of project two
