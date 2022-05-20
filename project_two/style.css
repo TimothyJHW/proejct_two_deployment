@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    font-family: poppins, sans-serif;
+    box-sizing:border-box;
+    margin:0;
+    color:white;
+}
+
+body {
+    background-image: url('mick-haupt-tJefy_Vu7Po-unsplash.jpg');
+    background-position: ;
+    background-size: cover;
+    background-repeat:no-repeat;
+    z-index:999;
+}
+
+header {
+    font-size: 2rem;
+    font-weight: 500;
+    color:lightgray;
+    text-align: center;
+    background-color: rgb(133, 73, 73);
+    padding:3rem;
+    text-decoration: underline;
+    border-radius:5px;
+    position:relative;
+}
+
+#navbar-mockup {
+    border:3px solid white;
+    height:10vh;
+    display:flex;
+    
+}
+
+.code-div {
+    height:30vh;
+    width:50vw;
+    position:absolute;
+    border:3px white solid;
+    color:white;
+    padding:0.5rem 0.5rem;
+}
+
+#code-div1 {
+    background-color:rgb(201, 68, 68);
+    left:0;
+    bottom:0;
+
+}
+
+#code-div2 {
+    background-color:rgb(59, 59, 113);
+    right:0;
+    bottom:0;
+}
+
+.code-div h3 {
+    text-align: center;
+    color:white;
+    padding:.5rem;
+}
+
+.list-altering-icons i {
+    color:white;
+    font-size:3rem;
+}
+
+#plusButton:hover {
+    background-color:green;
+    border:none;
+}
+
+#minusButton:hover {
+    background-color:red;
+    border:none;
+}
