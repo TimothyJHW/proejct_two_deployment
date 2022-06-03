@@ -27,11 +27,19 @@ header {
     position:relative;
 }
 
-#navbar-mockup {
+#navbar-mockup-list {
     border:3px solid white;
     height:10vh;
     display:flex;
-    
+    flex-direction:row;
+    align-items: ;
+    justify-content:right;
+}
+
+#navbar-mockup ul li{
+    text-decoration:none;
+    list-style:none;
+    padding-right:1rem;
 }
 
 .code-div {
@@ -47,7 +55,6 @@ header {
     background-color:rgb(201, 68, 68);
     left:0;
     bottom:0;
-
 }
 
 #code-div2 {
@@ -60,6 +67,17 @@ header {
     text-align: center;
     color:white;
     padding:.5rem;
+}
+
+.fa-copy {
+    font-size: 2rem;
+    position:absolute;
+    right:5%;
+    bottom:5%;
+}
+.fa-copy:hover {
+    color:yellow;
+    font-size: 2.25rem;
 }
 
 .list-altering-icons i {
