@@ -6,24 +6,28 @@
 const plusButton = document.getElementById("plusButton");
 const minusButton = document.getElementById("minusButton");
 const trashButton = document.getElementById("trashButton");
-const navbarArea = document.getElementById("navbar-mockup-list")
-copyButtonHtml = document.getElementById("copy-html")
-copyButtonCss = document.getElementById("copy-css")
-
-
+const navbarArea = document.getElementById("navbar-mockup-list");
+copyButtonHtml = document.getElementById("copy-html");
+copyButtonCss = document.getElementById("copy-css");
+const addNavEntryButton = document.getElementById('addNavEntry');
+const htmlCodeSection = document.getElementById('navbar-code-html');
+const cssCodeSection = document.getElementById('navbar-code-css');
+// General Variable Definitions
 
 var navbarList = [];
 var navbarListNum = 0;
+htmlCopytoClipboard = {}
+cssCopytoClipboard = {}
 
 
 
 
-console.log(plusButton,minusButton,navbarArea)
+// console.log(plusButton,minusButton,navbarArea)
 
 
 //Add listeners to button variables
 
-plusButton.addEventListener('click', addNavItem);
+addNavEntryButton.addEventListener('click', addNavItem);
 minusButton.addEventListener("click",removeNavItem);
 copyButtonHtml.addEventListener("click", copyToClipboard)
 copyButtonCss.addEventListener("click", copyToClipboard)
@@ -36,16 +40,22 @@ copyButtonCss.addEventListener("click", copyToClipboard)
 // Function add and delete navbar list entries
 
 function addNavItem(event) {
-    navbarList.push(["onemore",navbarListNum]);
-    console.log(event);
-    console.log(navbarList)
+    event.preventDefault();
+    newNavItem = document.getElementById('navbar-entries').value
+    navbarList.push([newNavItem.value,navbarListNum]);
+    // console.log(event);
+    console.log(newNavItem);
     listItem = document.createElement("li")
-    listItem.innerText = "Hello There"
+    listItem.innerHTML = newNavItem;
+    console.log(listItem)
     navbarArea.appendChild(listItem)
-
-
     navbarListNum++;
-    document.createElement("li");
+    // document.createElement("li");
+    htmlCodeString = "<li>"+newNavItem+"</li>";
+    htmlCodeStringElement = document.createElement("p");
+    htmlCodeStringElement.innerText = htmlCodeString;
+    htmlCodeSection.appendChild(htmlCodeStringElement)
+
 }
 
 function removeNavItem(event) {
@@ -64,5 +74,8 @@ function deleteNavbarEntry(event){
 // copy to clipboard function
 
 function copyToClipboard(event){
-    console.log("CTC working")
+    for (i=0;i<=htmlCodeSection.length;i++){
+        
+    }
 }
+

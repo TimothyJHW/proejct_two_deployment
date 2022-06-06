@@ -12,9 +12,11 @@ body {
     background-position: ;
     background-size: cover;
     background-repeat:no-repeat;
-    z-index:999;
 }
 
+input {
+    color:black;
+}
 header {
     font-size: 2rem;
     font-weight: 500;
@@ -30,9 +32,13 @@ header {
 #navbar-mockup-list {
     border:3px solid white;
     height:10vh;
+    background:slategray;
+}
+
+#navbar-mockup-list {
     display:flex;
     flex-direction:row;
-    align-items: ;
+    align-items:center ;
     justify-content:right;
 }
 
@@ -74,6 +80,7 @@ header {
     position:absolute;
     right:5%;
     bottom:5%;
+    transition: all .3s ease;
 }
 .fa-copy:hover {
     color:yellow;
