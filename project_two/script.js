@@ -12,6 +12,7 @@ copyButtonCss = document.getElementById("copy-css");
 const addNavEntryButton = document.getElementById('addNavEntry');
 const htmlCodeSection = document.getElementById('navbar-code-html');
 const cssCodeSection = document.getElementById('navbar-code-css');
+
 // General Variable Definitions
 
 var navbarList = [];
