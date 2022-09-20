@@ -72,7 +72,7 @@
 
 <br>
         <label for="padding">Choose the padding</label>
-        <input type = "number" name="padding" id="pad" min = 0 max = 6 value = 1>
+        <input type = "number" id="padding" min = 0 max = 6 value = 1>
 
 
 
@@ -81,21 +81,30 @@
 
         <div class="code-div" id="code-div1">
             <h3>Nav Bar Code (HTML)</h3>
-            <code>nav</code>
             <div id="navbar-code-html">
-            <i class="fa-solid fa-copy" id = "copy-html"></i>
+            &ltnav&gt
+
+
 
             </div>
+            &lt/nav&gt
+            <i class="fa-solid fa-copy" id = "copy-html"></i>
+
     
         </div>
 
         <div class = "code-div" id="code-div2">
             <h3>Nav Bar Code (CSS) </h3>
+            nav{
             <div id="navbar-code-css">
-            <code>nav{  }
-            </code>
-            <i class="fa-solid fa-copy" id = "copy-css"></i>
+                <p id="cssDisplay">display: flex;</p>
+                <p id="cssAlignment">justify-content: right;</p>
+                <p id="cssPadding">padding: 0rem;</p>
+            }
             </div>
+ 
+            <i class="fa-solid fa-copy" id = "copy-css"></i>
+
         </div>
         <script src="script.js" async defer></script>
     </body>

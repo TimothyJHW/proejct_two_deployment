@@ -6,13 +6,20 @@
 const plusButton = document.getElementById("plusButton");
 const minusButton = document.getElementById("minusButton");
 const trashButton = document.getElementById("trashButton");
+
 const navbarArea = document.getElementById("navbar-mockup-list");
 copyButtonHtml = document.getElementById("copy-html");
 copyButtonCss = document.getElementById("copy-css");
 const addNavEntryButton = document.getElementById('addNavEntry');
 const htmlCodeSection = document.getElementById('navbar-code-html');
 const cssCodeSection = document.getElementById('navbar-code-css');
-const alignment = document.getElementById('align')
+const alignment = document.getElementById('align');
+const csspadding = document.getElementById('padding');
+var cssPanel = {
+    display: "inline-block",
+    justifyContent: "right",
+    padding: 0,
+}
 
 // General Variable Definitions
 
@@ -35,20 +42,38 @@ copyButtonHtml.addEventListener("click", copyToClipboard)
 copyButtonCss.addEventListener("click", copyToClipboard)
 // trashButton.addEventListener("click",deleteNavbarEntry);
 alignment.addEventListener("click",align);
+csspadding.addEventListener("click",padding);
 
 function align (e) {
-    target=e.target
 
-    if(e.target.getAttribute("id")=="right"){
-        navbarArea.style.justifyContent = "right";
-    }
-    else if (e.target.getAttribute("id")=="left"){
+    if(e.target.getAttribute("id")=="left"){
         navbarArea.style.justifyContent = "left";
+        cssCodeString = "justify-content : left;"
+        document.getElementById("cssAlignment").innerText = cssCodeString
     }
     else if (e.target.getAttribute("id")=="center"){
         navbarArea.style.justifyContent = "center";
+        cssCodeString = "justify-content : center;"
+        document.getElementById("cssAlignment").innerText = cssCodeString
+    }
+    else if (e.target.getAttribute("id")=="right"){
+        navbarArea.style.justifyContent = "right";
+        cssCodeString = "justify-content : right;"
+        document.getElementById("cssAlignment").innerText = cssCodeString
     }
 }
+
+function updateCssPanel () {
+
+}
+
+
+function padding(e) {
+    target= e.target
+    
+}
+
+
 
 
 
@@ -59,8 +84,6 @@ function addNavItem(event) {
     event.preventDefault();
     newNavItem = document.getElementById('navbar-entries').value
     navbarList.push([newNavItem.value,navbarListNum]);
-    // console.log(event);
-    console.log(newNavItem);
     listItem = document.createElement("li")
     listItem.innerHTML = newNavItem;
     console.log(listItem)
@@ -68,7 +91,11 @@ function addNavItem(event) {
     navbarListNum++;
     // document.createElement("li");
     htmlCodeString = "<li>"+newNavItem+"</li>";
+
+    // On the screen it appears as an "li" element behind the scenes it is a "p" element
+
     htmlCodeStringElement = document.createElement("p");
+    htmlCodeStringElement.setAttribute("draggable",true)
     htmlCodeStringElement.innerText = htmlCodeString;
     htmlCodeSection.appendChild(htmlCodeStringElement)
 
@@ -90,8 +117,8 @@ function deleteNavbarEntry(event){
 // copy to clipboard function
 
 function copyToClipboard(event){
-    for (i=0;i<=htmlCodeSection.length;i++){
+    // for (i=0;i<=htmlCodeSection.length;i++){
         
-    }
+    // }
 }
 
