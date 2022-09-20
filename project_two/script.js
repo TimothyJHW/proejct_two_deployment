@@ -12,6 +12,7 @@ copyButtonCss = document.getElementById("copy-css");
 const addNavEntryButton = document.getElementById('addNavEntry');
 const htmlCodeSection = document.getElementById('navbar-code-html');
 const cssCodeSection = document.getElementById('navbar-code-css');
+const alignment = document.getElementById('align')
 
 // General Variable Definitions
 
@@ -33,7 +34,21 @@ minusButton.addEventListener("click",removeNavItem);
 copyButtonHtml.addEventListener("click", copyToClipboard)
 copyButtonCss.addEventListener("click", copyToClipboard)
 // trashButton.addEventListener("click",deleteNavbarEntry);
+alignment.addEventListener("click",align);
 
+function align (e) {
+    target=e.target
+
+    if(e.target.getAttribute("id")=="right"){
+        navbarArea.style.justifyContent = "right";
+    }
+    else if (e.target.getAttribute("id")=="left"){
+        navbarArea.style.justifyContent = "left";
+    }
+    else if (e.target.getAttribute("id")=="center"){
+        navbarArea.style.justifyContent = "center";
+    }
+}
 
 
 
