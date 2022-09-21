@@ -31,11 +31,9 @@ header {
 
 #navbar-mockup-list {
     border:3px solid white;
-    height:10vh;
+    min-height:5vh;
+    max-height:20vh;
     background:slategray;
-}
-
-#navbar-mockup-list {
     display:flex;
     flex-direction:row;
     align-items:center ;
@@ -46,6 +44,12 @@ header {
     text-decoration:none;
     list-style:none;
     padding-right:1rem;
+    font-family:inherit;
+}
+
+#dashboard {
+    position:absolute;
+
 }
 
 .code-div {

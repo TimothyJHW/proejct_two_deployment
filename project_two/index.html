@@ -22,8 +22,9 @@
             <ul id = "navbar-mockup-list">
 
             </ul>
-
         </div>
+
+    <div id="dashboard">
 
         <div class="list-altering-icons">
         <button id="plusButton" type = "submit">
@@ -56,7 +57,7 @@
         <input type = "radio" name="flexgridordiv" id="fgd">
         <label for="div">Div</label>
 
-<!-- Alignment of the navbar: left, right or center -->
+<!-- Alignment of the navbar: left, right, center or full width -->
 <br>
     <form action="" id="align">
         <label for="alignment">Choose where you want the navbar aligned</label>
@@ -66,17 +67,43 @@
         <label for="alignment">Center</label>
         <input type = "radio" id="right">
         <label for="div">Right</label>
+        <input type = "radio" id="fullwidth">
+        <label for="div">Full Width</label>
     </form>
+
+<!-- uppercase, lowercase or capitalize -->
+<form action="" id="case">
+    <label for="case">Choose the case of navbar entries</label>
+    <input type = "radio" id="upper">
+    <label for="case">Uppercase</label>
+    <input type = "radio" id="lower">
+    <label for="case">Lowercase</label>
+    <input type = "radio" id="capitalize">
+    <label for="div">Capitalize</label>
+</form>
 
 <!-- Padding -->
 
-<br>
+        <br>
         <label for="padding">Choose the padding</label>
         <input type = "number" id="padding" min = 0 max = 6 value = 1>
 
 
+<!-- font style -->
+    <br>
+    <label for="fontFamily">Which kind of font?</label>
+    <select name="fontFamily" id="fontFamily">
+    <option value="serif">Serif</option>
+    <option value="sans-serif">Sans serif</option>
 
- 
+
+
+    
+  </select>
+
+<!-- background color -->
+<!-- dashboard closing div -->
+</div> 
 
 
         <div class="code-div" id="code-div1">
@@ -100,6 +127,8 @@
                 <p id="cssDisplay">display: flex;</p>
                 <p id="cssAlignment">justify-content: right;</p>
                 <p id="cssPadding">padding: 0rem;</p>
+                <p id="cssfontFamily">font-family: sans-serif;</p>
+                <p id="cssCase">text-transform: lowecase;</p>
             }
             </div>
  
@@ -109,3 +138,4 @@
         <script src="script.js" async defer></script>
     </body>
 </html>
+
