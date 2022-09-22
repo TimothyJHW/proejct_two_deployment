@@ -17,6 +17,7 @@ const alignment = document.getElementById('align');
 const textCase = document.getElementById('case');
 const cssPadding = document.getElementById('padding');
 const cssfontFamily = document.getElementById('fontFamily');
+const cssCase = document.getElementById('cssCase');
 
 const windowsFontList = [
 'Arial',
@@ -107,6 +108,7 @@ cssPadding.addEventListener("click",padding);
 cssfontFamily.addEventListener("click",fontFamily);
 
 
+// text-alignment function
 
 function align (e) {
 
@@ -136,6 +138,7 @@ function updateCssPanel () {
 
 }
 
+// change padding function
 
 function padding(e) {
     targetValue = (e.target.value/3) + "rem"
@@ -143,6 +146,9 @@ function padding(e) {
     cssCodeString = "padding : " + targetValue
     document.getElementById("cssPadding").innerText = cssCodeString
 }
+
+// change font function
+
 function fontFamily(e) {
     targetValue = e.target.value
     navbarArea.style.fontFamily = targetValue;
@@ -150,23 +156,23 @@ function fontFamily(e) {
     document.getElementById("cssfontFamily").innerText = cssCodeString
 }
 
+// change text case function
+
 function changeCase (e) {
     if(e.target.getAttribute("id")=="upper"){
-        alert("upper")
         navbarArea.style.textTransform = "uppercase";
         cssCodeString = "text-transform : uppercase;"
-        document.getElementById("cssAlignment").innerText = cssCodeString
+        document.getElementById("cssCase").innerText = cssCodeString
     }
     else if (e.target.getAttribute("id")=="lower"){
-        alert("lower")
         navbarArea.style.textTransform = "lowercase";
         cssCodeString = "text-transform : lowercase;"
-        document.getElementById("cssAlignment").innerText = cssCodeString
+        document.getElementById("cssCase").innerText = cssCodeString
     }
     else if (e.target.getAttribute("id")=="capitalize"){
         navbarArea.style.textTransform = "capitalize";
         cssCodeString = "text-transform : capitalize;"
-        document.getElementById("cssAlignment").innerText = cssCodeString
+        document.getElementById("cssCase").innerText = cssCodeString
     }
 }
 

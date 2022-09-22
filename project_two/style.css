@@ -8,14 +8,21 @@
 }
 
 body {
-    background-image: url('mick-haupt-tJefy_Vu7Po-unsplash.jpg');
-    background-position: top right;
-    background-size: cover;
-    background-repeat:no-repeat;
+    background-color: darkgrey;
 }
 
 input {
-    color:black;
+    color:white;
+    background-color: darkblue;;
+    display:inline;
+}
+label {
+    display:inline;
+}
+
+select {
+    color:white;
+    background-color: darkblue;
 }
 header {
     font-size: 2rem;
@@ -27,13 +34,20 @@ header {
     text-decoration: underline;
     border-radius:5px;
     position:relative;
+    background-image: url('mick-haupt-tJefy_Vu7Po-unsplash.jpg');
+    background-position: left center;
+    background-size: cover;
+    background-repeat:no-repeat;
+}
+#thenavbar-space {
+    height:20vh;
 }
 
 #navbar-mockup-list {
-    border:3px solid white;
+    /* border:3px solid white; */
     min-height:5vh;
     max-height:20vh;
-    background:slategray;
+    background:hsl(210, 13%, 50%);
     display:flex;
     flex-direction:row;
     align-items:center ;
@@ -47,9 +61,24 @@ header {
     font-family:inherit;
 }
 
-#dashboard {
-    position:absolute;
+.wrapper {
+    align-items:center;
+}
 
+#dashboard {
+    display:flex;
+    justify-content: space-between;
+    padding:0 1rem;
+}
+
+#dashboard > * {
+    border:1px solid white;
+    border-radius:10px;
+}
+
+#typography-wrapper, #alignment-wrapper, #color-wrapper, #paddingandspacing-wrapper {
+    display:flex;
+    flex-direction: column;
 }
 
 .code-div {

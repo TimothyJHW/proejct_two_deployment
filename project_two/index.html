@@ -16,14 +16,17 @@
         Nav Bar Creator
         <i class="fa-solid fa-location-crosshairs"></i>
         </header>
-
-        Nav Bar Mockup
+    <div id="thenavbar-space">
+        <br>
+        <h4>Nav Bar Mockup</h4>
+        <br>
         <div id="navbar-mockup" style = "display: "flex";>
             <ul id = "navbar-mockup-list">
 
             </ul>
         </div>
-
+    </div>
+    
     <div id="dashboard">
 
         <div class="list-altering-icons">
@@ -47,7 +50,7 @@
         </form>
 
 <!-- Whether the user wants to use flexbox, grid or simple inline divs -->
-
+<!-- 
         <label for="alignment">Choose where you want the navbar to appear.</label>
         <label for="box-type" class = "flexgridordiv">How do you wish the navbar to be organised?</label>
         <input type = "radio" name="flexgridordiv" id="fgd">
@@ -55,53 +58,90 @@
         <input type = "radio" name="flexgridordiv" id="fgd">
         <label for="grid">Grid</label>
         <input type = "radio" name="flexgridordiv" id="fgd">
-        <label for="div">Div</label>
+        <label for="div">Div</label> -->
 
 <!-- Alignment of the navbar: left, right, center or full width -->
-<br>
+<div id="alignment-wrapper" class = "wrapper">
+    <h3>Alignment</h3>
+    <br>
     <form action="" id="align">
-        <label for="alignment">Choose where you want the navbar aligned</label>
+        <label for="alignment">Align Nav Items</label>
         <input type = "radio" id="left">
         <label for="alignment">Left</label>
         <input type = "radio" id="center">
         <label for="alignment">Center</label>
         <input type = "radio" id="right">
-        <label for="div">Right</label>
+        <label for="alignment">Right</label>
         <input type = "radio" id="fullwidth">
-        <label for="div">Full Width</label>
+        <label for="alignment">Full Width</label>
     </form>
+</div>
+
+<!-- color -->
+
+<div id="color-wrapper" class = "wrapper">
+    <h3>Colors</h3>
+    <br>
+    <form action="" id="color">
+        <label for="bgcolor">Colors</label>
+        <input type="color" id="bgcolor" name="bgcolor"
+           value="#708090">
+    <label for="bgcolor">Background Color</label>
+    <input type="color" id="txtcolor" name="txtcolor"
+            value="#FFFFFF">
+    <label for="txtcolor">Text Color</label>
+     
+    </form>
+</div>
+
+
+
+
+<!-- typography wrapper -->
+<div id="typography-wrapper" class = "wrapper">
+    <h3>Typography</h3>
+
+<!-- font style -->
+    <br>
+    <label for="fontFamily">Font</label>
+    <select name="fontFamily" id="fontFamily">
+    <option value="serif">Serif</option>
+    <option value="sans-serif">Sans serif</option>
+    </select>
 
 <!-- uppercase, lowercase or capitalize -->
-<form action="" id="case">
-    <label for="case">Choose the case of navbar entries</label>
+    <form action="" id="case">
+    <label for="case">Case</label>
     <input type = "radio" id="upper">
     <label for="case">Uppercase</label>
     <input type = "radio" id="lower">
     <label for="case">Lowercase</label>
     <input type = "radio" id="capitalize">
     <label for="div">Capitalize</label>
-</form>
+    </form>
+<!-- font size -->
+    <label for="fontsize">Font Size</label>
+    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    </form>
+</div>
 
+
+
+<!-- padding and spacing -->
+<div id="paddingandspacing-wrapper" class = "wrapper">
+    <h3>Spacing</h3>
 <!-- Padding -->
-
         <br>
-        <label for="padding">Choose the padding</label>
+        <label for="padding">Padding Top and Bottom</label>
         <input type = "number" id="padding" min = 0 max = 6 value = 1>
+        <label for="padding">Padding Right</label>
+        <input type = "number" id="paddingR" min = 0 max = 6 value = 1>
+        <label for="padding">Padding Left</label>
+        <input type = "number" id="paddingL" min = 0 max = 6 value = 1>
+        <label for="padding">Letter Spacing</label>
+        <input type = "number" id="letterspacing" min = 0 max = 6 value = 1>
+</div>
 
-
-<!-- font style -->
-    <br>
-    <label for="fontFamily">Which kind of font?</label>
-    <select name="fontFamily" id="fontFamily">
-    <option value="serif">Serif</option>
-    <option value="sans-serif">Sans serif</option>
-
-
-
-    
-  </select>
-
-<!-- background color -->
 <!-- dashboard closing div -->
 </div> 
 
@@ -128,7 +168,7 @@
                 <p id="cssAlignment">justify-content: right;</p>
                 <p id="cssPadding">padding: 0rem;</p>
                 <p id="cssfontFamily">font-family: sans-serif;</p>
-                <p id="cssCase">text-transform: lowecase;</p>
+                <p id="cssCase">text-transform: lowercase;</p>
             }
             </div>
  
