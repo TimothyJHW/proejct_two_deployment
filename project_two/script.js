@@ -152,12 +152,14 @@ function fontFamily(e) {
 
 function changeCase (e) {
     if(e.target.getAttribute("id")=="upper"){
-        navbarArea.style.textTransform = "uppercase;"
+        alert("upper")
+        navbarArea.style.textTransform = "uppercase";
         cssCodeString = "text-transform : uppercase;"
         document.getElementById("cssAlignment").innerText = cssCodeString
     }
     else if (e.target.getAttribute("id")=="lower"){
-        navbarArea.style.textTransform = "lowercase;"
+        alert("lower")
+        navbarArea.style.textTransform = "lowercase";
         cssCodeString = "text-transform : lowercase;"
         document.getElementById("cssAlignment").innerText = cssCodeString
     }
