@@ -28,7 +28,7 @@
     </div>
     
     <div id="dashboard">
-
+<!-- 
         <div class="list-altering-icons">
         <button id="plusButton" type = "submit">
         <i class="fa-solid fa-square-plus"></i>
@@ -38,11 +38,13 @@
             <i class="fa-regular fa-square-minus" id = "minusButton"></i>
         </button>
         </div>
-        <i class="fa-solid fa-trash-can"></i>
+        <i class="fa-solid fa-trash-can"></i> -->
 
 <!-- Input nav bar items here -->
+
         <form>
-        <label for="navinput" class="nav-options">Nav Bar Entry</label>
+        <h3>Input Nav Entries Here</h3>
+        <br>
         <input type="text" name="navinput" placeholder = "Type nav entry here" id="navbar-entries" required>
         <button type= "submit"  id ="addNavEntry">
             <i class="fa-solid fa-square-check"></i>
@@ -65,7 +67,6 @@
     <h3>Alignment</h3>
     <br>
     <form action="" id="align">
-        <label for="alignment">Align Nav Items</label>
         <input type = "radio" id="left">
         <label for="alignment">Left</label>
         <input type = "radio" id="center">
@@ -83,7 +84,6 @@
     <h3>Colors</h3>
     <br>
     <form action="" id="color">
-        <label for="bgcolor">Colors</label>
         <input type="color" id="bgcolor" name="bgcolor"
            value="#708090">
     <label for="bgcolor">Background Color</label>
@@ -102,16 +102,18 @@
     <h3>Typography</h3>
 
 <!-- font style -->
+
     <br>
     <label for="fontFamily">Font</label>
     <select name="fontFamily" id="fontFamily">
     <option value="serif">Serif</option>
     <option value="sans-serif">Sans serif</option>
     </select>
+    <br>
 
 <!-- uppercase, lowercase or capitalize -->
+
     <form action="" id="case">
-    <label for="case">Case</label>
     <input type = "radio" id="upper">
     <label for="case">Uppercase</label>
     <input type = "radio" id="lower">
@@ -119,27 +121,31 @@
     <input type = "radio" id="capitalize">
     <label for="div">Capitalize</label>
     </form>
+
 <!-- font size -->
+<br>
     <label for="fontsize">Font Size</label>
-    <input type="range" min="1" max="100" value="50" class="slider" id="myRange">
+    <input type="range" min="1" max="100" value="16" class="slider" id="fontsizerange">
+    <p>Font size: <span></span></p>
     </form>
 </div>
 
 
 
 <!-- padding and spacing -->
+
 <div id="paddingandspacing-wrapper" class = "wrapper">
     <h3>Spacing</h3>
 <!-- Padding -->
         <br>
-        <label for="padding">Padding Top and Bottom</label>
-        <input type = "number" id="padding" min = 0 max = 6 value = 1>
-        <label for="padding">Padding Right</label>
-        <input type = "number" id="paddingR" min = 0 max = 6 value = 1>
-        <label for="padding">Padding Left</label>
-        <input type = "number" id="paddingL" min = 0 max = 6 value = 1>
-        <label for="padding">Letter Spacing</label>
-        <input type = "number" id="letterspacing" min = 0 max = 6 value = 1>
+            <label for="padding">Padding Top and Bottom</label>
+            <input type = "number" class = "padding" id="paddingT" min = 0 max = 6 value = 1>
+            <label for="padding">Padding Right</label>
+            <input type = "number" class = "padding" id="paddingR" min = 0 max = 6 value = 1>
+            <label for="padding">Padding Left</label>
+            <input type = "number" class = "padding" id="paddingL" min = 0 max = 6 value = 1>
+            <label for="padding">Letter Spacing</label>
+            <input type = "number" class = "padding" id="letterS" min = 0 max = 6 value = 1>
 </div>
 
 <!-- dashboard closing div -->
@@ -150,14 +156,9 @@
             <h3>Nav Bar Code (HTML)</h3>
             <div id="navbar-code-html">
             &ltnav&gt
-
-
-
             </div>
             &lt/nav&gt
-            <i class="fa-solid fa-copy" id = "copy-html"></i>
-
-    
+            <i class="fa-solid fa-copy" id = "copy-html"></i>    
         </div>
 
         <div class = "code-div" id="code-div2">
@@ -169,6 +170,10 @@
                 <p id="cssPadding">padding: 0rem;</p>
                 <p id="cssfontFamily">font-family: sans-serif;</p>
                 <p id="cssCase">text-transform: lowercase;</p>
+                <p id="cssletterSpacing">letter-spacing: 0;</p>
+                <p id="cssbackgroundColor">background-color: ;</p>
+                <p id="csscolor">color: ;</p>
+
             }
             </div>
  

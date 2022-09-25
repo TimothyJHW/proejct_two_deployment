@@ -1,6 +1,3 @@
-// const plusButton = document.getElementsByClassName("fa-square-plus");
-// const minusButton = document.getElementsByClassName("fa-square-minus");
-
 //Assign buttons to variables
 
 const plusButton = document.getElementById("plusButton");
@@ -8,16 +5,24 @@ const minusButton = document.getElementById("minusButton");
 const trashButton = document.getElementById("trashButton");
 
 const navbarArea = document.getElementById("navbar-mockup-list");
-copyButtonHtml = document.getElementById("copy-html");
-copyButtonCss = document.getElementById("copy-css");
+const copyButtonHtml = document.getElementById("copy-html");
+const copyButtonCss = document.getElementById("copy-css");
 const addNavEntryButton = document.getElementById('addNavEntry');
 const htmlCodeSection = document.getElementById('navbar-code-html');
 const cssCodeSection = document.getElementById('navbar-code-css');
 const alignment = document.getElementById('align');
+const textPadding = document.getElementsByClassName('padding');
 const textCase = document.getElementById('case');
-const cssPadding = document.getElementById('padding');
+const cssPadding = document.getElementById('cssPadding');
 const cssfontFamily = document.getElementById('fontFamily');
 const cssCase = document.getElementById('cssCase');
+const csscolor = document.getElementById('color');
+const cssbackgroundColor = document.getElementById('cssCase');
+
+
+// the text value of the font slider
+
+document.querySelector("p > span").innerText = document.getElementById("fontsizerange").value;
 
 const windowsFontList = [
 'Arial',
@@ -91,21 +96,82 @@ cssCopytoClipboard = {}
 
 
 
-
-// console.log(plusButton,minusButton,navbarArea)
-
-
 //Add listeners to button variables
 
+document.addEventListener("DOMContentLoaded",init);
 addNavEntryButton.addEventListener('click', addNavItem);
-minusButton.addEventListener("click",removeNavItem);
+
+// minusButton.addEventListener("click",removeNavItem);
+
 copyButtonHtml.addEventListener("click", copyToClipboard)
 copyButtonCss.addEventListener("click", copyToClipboard)
+
 // trashButton.addEventListener("click",deleteNavbarEntry);
+
 alignment.addEventListener("click",align);
 textCase.addEventListener("click",changeCase);
-cssPadding.addEventListener("click",padding);
+// textPadding.forEach() addEventListener("click", padding);
+
+
 cssfontFamily.addEventListener("click",fontFamily);
+document.getElementById("fontsizerange").addEventListener("change",fontsizechange);
+document.getElementById("txtcolor").addEventListener("change",colorPicker);
+document.getElementById("bgcolor").addEventListener("change",colorPicker);
+
+
+// initialising function once the DOM loads
+function init() {
+    loadFontList(windowsFontList)
+    for (i of textPadding){
+        paddingItem = document.getElementById(i.id)
+        console.log(i.id.slice(-1))
+        // document.i.srcElement.addEventListener("click",padding(i.id))
+        // padding(paddingItem,i.id)
+        paddingItem.addEventListener("click",whichSpacing)
+    }
+}
+
+
+function whichSpacing(e) {
+    if(e.srcElement.id =="paddingT"){
+    targetValue = (e.target.value/3) + "rem"
+    navbarArea.style.padding = targetValue
+    cssCodeString = "padding : " + targetValue
+    document.getElementById("cssPadding").innerText = cssCodeString
+    }
+    else if (e.srcElement.id =="paddingR") {
+        targetValue = (e.target.value/3) + "rem"
+        navbarArea.style.paddingRight = targetValue
+        cssCodeString = "padding : " + targetValue
+        document.getElementById("cssPadding").innerText = cssCodeString
+    }
+    else if (e.srcElement.id =="paddingL") {
+        targetValue = (e.target.value/3) + "rem"
+        navbarArea.style.paddingLeft = targetValue
+        cssCodeString = "padding : " + targetValue
+        document.getElementById("cssPadding").innerText = cssCodeString
+    }
+    else if (e.srcElement.id =="letterS") {
+        targetValue = (e.target.value/3) + "rem"
+        navbarArea.style.letterSpacing = targetValue
+        cssCodeString = "letter-spacing : " + targetValue
+        document.getElementById("cssletterSpacing").innerText = cssCodeString
+    }
+}
+
+function colorPicker(e) {
+    console.log(e)
+    if (e.srcElement.id == "bgcolor") {
+        navbarArea.style.backgroundColor = e.target.value;
+        cssCodeString = "bacground-color : " + e.target.value
+        document.getElementById("cssbackgroundColor").innerText = cssCodeString
+    }
+    else {
+        navbarArea.style.color= e.target.value
+        cssCodeString = "color : " + e.target.value
+        document.getElementById("csscolor").innerText = cssCodeString
+    }
+}
 
 
 // text-alignment function
@@ -138,14 +204,6 @@ function updateCssPanel () {
 
 }
 
-// change padding function
-
-function padding(e) {
-    targetValue = (e.target.value/3) + "rem"
-    navbarArea.style.padding = targetValue
-    cssCodeString = "padding : " + targetValue
-    document.getElementById("cssPadding").innerText = cssCodeString
-}
 
 // change font function
 
@@ -176,33 +234,42 @@ function changeCase (e) {
     }
 }
 
+function fontsizechange(e) {
+    document.querySelector("p > span").innerHTML = e.target.value;
+    navbarArea.style.fontSize = e.target.value + "px";
 
-
+}
 
 
 
 // Function add and delete navbar list entries
 
-function addNavItem(event) {
-    event.preventDefault();
-    newNavItem = document.getElementById('navbar-entries').value
-    navbarList.push([newNavItem.value,navbarListNum]);
-    listItem = document.createElement("li")
-    listItem.innerHTML = newNavItem;
-    console.log(listItem)
-    navbarArea.appendChild(listItem)
-    navbarListNum++;
-    // document.createElement("li");
-    htmlCodeString = "<li>"+newNavItem+"</li>";
+function addNavItem(e) {
+    e.preventDefault();
+    if (navbarListNum < 6) {
+        newNavItem = document.getElementById('navbar-entries').value
+        navbarList.push([newNavItem.value,navbarListNum]);
+        listItem = document.createElement("li")
+        listItem.innerHTML = newNavItem;
+        console.log(listItem)
+        navbarArea.appendChild(listItem)
+        navbarListNum++;
+        // document.createElement("li");
+        htmlCodeString = "<li>"+newNavItem+"</li>";
 
-    // On the screen it appears as an "li" element behind the scenes it is a "p" element
+        // On the screen it appears as an "li" element behind the scenes it is a "p" element
 
-    htmlCodeStringElement = document.createElement("p");
-    htmlCodeStringElement.setAttribute("draggable",true)
-    htmlCodeStringElement.innerText = htmlCodeString;
-    htmlCodeSection.appendChild(htmlCodeStringElement)
-
+        htmlCodeStringElement = document.createElement("p");
+        htmlCodeStringElement.setAttribute("draggable",true)
+        htmlCodeStringElement.id = (navbarListNum);
+        htmlCodeStringElement.innerText = htmlCodeString;
+        htmlCodeSection.appendChild(htmlCodeStringElement)
+} else {
+    alert("Maximum number of navbar entries is 6")
 }
+}
+
+
 
 //loads the array of fonts into the select html elements
 
@@ -217,7 +284,7 @@ function loadFontList(list) {
 }
 
 
-function removeNavItem(event) {
+function removeNavItem(e) {
     navbarList.pop();
     console.log(event.srcElement);
     console.log(navbarList)
@@ -232,7 +299,18 @@ function deleteNavbarEntry(event){
 
 // copy to clipboard function
 
-function copyToClipboard(event){
+function copyToClipboard(e){
+    if (e.target.getAttribute("id") == "copy-html") {
+        // console.log(document.querySelector("#navbar-code-html").innerText)
+        clipboard = document.querySelector("#navbar-code-html").innerText;
+        clipboard += "\n</nav>";
+        navigator.clipboard.writeText(clipboard);
+    }
+    else {
+
+    }
+
+
     // for (i=0;i<=htmlCodeSection.length;i++){
         
     // }
