@@ -51,14 +51,16 @@ header {
 }
 
 #navbar-mockup-list {
-    /* border:3px solid white; */
     min-height:5vh;
     max-height:20vh;
-    background:hsl(210, 13%, 50%);
-    display:flex;
-    flex-direction:row;
-    align-items:center ;
-    justify-content:right;
+    background:#6f8090;
+    display: flex;
+    flex-direction:
+    row;
+    align-items:
+    center;
+    justify-content:
+    right;
 }
 
 #navbar-mockup ul li{
@@ -83,6 +85,12 @@ header {
 #dashboard > * {
     border:1px solid white;
     border-radius:10px;
+    background-color: rgb(144, 166, 188);
+    padding: 0.5rem 1rem;
+}
+
+#opacity {
+    text-align:center;
 }
 
 #typography-wrapper, #alignment-wrapper, #color-wrapper, #paddingandspacing-wrapper {

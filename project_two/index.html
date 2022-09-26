@@ -79,23 +79,22 @@
 </div>
 
 <!-- color -->
-
 <div id="color-wrapper" class = "wrapper">
     <h3>Colors</h3>
     <br>
-    <form action="" id="color">
-        <input type="color" id="bgcolor" name="bgcolor"
+
+    <input type="color" id="bgcolor" name="bgcolor"
            value="#708090">
     <label for="bgcolor">Background Color</label>
     <input type="color" id="txtcolor" name="txtcolor"
             value="#FFFFFF">
     <label for="txtcolor">Text Color</label>
-     
-    </form>
+    <br>
+    <label for="opacity">Opacity</label>
+    <input type="range" min="0%" max="100%" value="100%" class="slider" id="opacityrange">
+
+    
 </div>
-
-
-
 
 <!-- typography wrapper -->
 <div id="typography-wrapper" class = "wrapper">
@@ -125,7 +124,7 @@
 <!-- font size -->
 <br>
     <label for="fontsize">Font Size</label>
-    <input type="range" min="1" max="100" value="16" class="slider" id="fontsizerange">
+    <input type="range" min="8" max="30" value="16" class="slider" id="fontsizerange">
     <p>Font size: <span></span></p>
     </form>
 </div>
@@ -150,8 +149,6 @@
 
 <!-- dashboard closing div -->
 </div> 
-
-
         <div class="code-div" id="code-div1">
             <h3>Nav Bar Code (HTML)</h3>
             <div id="navbar-code-html">
@@ -163,16 +160,17 @@
 
         <div class = "code-div" id="code-div2">
             <h3>Nav Bar Code (CSS) </h3>
-            nav{
             <div id="navbar-code-css">
+                nav{
                 <p id="cssDisplay">display: flex;</p>
                 <p id="cssAlignment">justify-content: right;</p>
                 <p id="cssPadding">padding: 0rem;</p>
                 <p id="cssfontFamily">font-family: sans-serif;</p>
                 <p id="cssCase">text-transform: lowercase;</p>
                 <p id="cssletterSpacing">letter-spacing: 0;</p>
-                <p id="cssbackgroundColor">background-color: ;</p>
-                <p id="csscolor">color: ;</p>
+                <p id="cssopacity">opacity: 100%;</p>
+                <p id="cssbackgroundColor">background-color: #6f8090;</p>
+                <p id="csscolor">color: #fff;</p>
 
             }
             </div>
@@ -183,4 +181,3 @@
         <script src="script.js" async defer></script>
     </body>
 </html>
-

@@ -115,6 +115,7 @@ textCase.addEventListener("click",changeCase);
 
 cssfontFamily.addEventListener("click",fontFamily);
 document.getElementById("fontsizerange").addEventListener("change",fontsizechange);
+document.getElementById("opacityrange").addEventListener("change",opacitychange);
 document.getElementById("txtcolor").addEventListener("change",colorPicker);
 document.getElementById("bgcolor").addEventListener("change",colorPicker);
 
@@ -160,10 +161,9 @@ function whichSpacing(e) {
 }
 
 function colorPicker(e) {
-    console.log(e)
     if (e.srcElement.id == "bgcolor") {
         navbarArea.style.backgroundColor = e.target.value;
-        cssCodeString = "bacground-color : " + e.target.value
+        cssCodeString = "background-color : " + e.target.value
         document.getElementById("cssbackgroundColor").innerText = cssCodeString
     }
     else {
@@ -177,7 +177,6 @@ function colorPicker(e) {
 // text-alignment function
 
 function align (e) {
-
     if(e.target.getAttribute("id")=="left"){
         navbarArea.style.justifyContent = "left";
         cssCodeString = "justify-content : left;"
@@ -234,10 +233,15 @@ function changeCase (e) {
     }
 }
 
+//slider functions
+
 function fontsizechange(e) {
     document.querySelector("p > span").innerHTML = e.target.value;
     navbarArea.style.fontSize = e.target.value + "px";
+}
 
+function opacitychange(e) {
+    navbarArea.style.opacity = e.target.value + "%";
 }
 
 
@@ -246,7 +250,7 @@ function fontsizechange(e) {
 
 function addNavItem(e) {
     e.preventDefault();
-    if (navbarListNum < 6) {
+    if (navbarListNum < 5) {
         newNavItem = document.getElementById('navbar-entries').value
         navbarList.push([newNavItem.value,navbarListNum]);
         listItem = document.createElement("li")
@@ -265,7 +269,7 @@ function addNavItem(e) {
         htmlCodeStringElement.innerText = htmlCodeString;
         htmlCodeSection.appendChild(htmlCodeStringElement)
 } else {
-    alert("Maximum number of navbar entries is 6")
+    alert("Maximum number of navbar entries is 5")
 }
 }
 
@@ -307,6 +311,8 @@ function copyToClipboard(e){
         navigator.clipboard.writeText(clipboard);
     }
     else {
+        clipboard = document.querySelector("#navbar-code-css").innerText;
+        navigator.clipboard.writeText(clipboard);
 
     }
 
