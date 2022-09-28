@@ -25,65 +25,7 @@ const cssbackgroundColor = document.getElementById('cssCase');
 document.querySelector("p > span").innerText = document.getElementById("fontsizerange").value;
 
 const windowsFontList = [
-'Arial',
-'Arial Black',
-'Bahnschrift',
-'Calibri',
-'Cambria',
-'Cambria Math',
-'Candara',
-'Comic Sans MS',
-'Consolas',
-'Constantia',
-'Corbel',
-'Courier New',
-'Ebrima',
-'Franklin Gothic Medium',
-'Gabriola',
-'Gadugi',
-'Georgia',
-'HoloLens MDL2 Assets',
-'Impact',
-'Ink Free',
-'Javanese Text',
-'Leelawadee UI',
-'Lucida Console',
-'Lucida Sans Unicode',
-'Malgun Gothic',
-'Marlett',
-'Microsoft Himalaya',
-'Microsoft JhengHei',
-'Microsoft New Tai Lue',
-'Microsoft PhagsPa',
-'Microsoft Sans Serif',
-'Microsoft Tai Le',
-'Microsoft YaHei',
-'Microsoft Yi Baiti',
-'MingLiU-ExtB',
-'Mongolian Baiti',
-'MS Gothic',
-'MV Boli',
-'Myanmar Text',
-'Nirmala UI',
-'Palatino Linotype',
-'Segoe MDL2 Assets',
-'Segoe Print',
-'Segoe Script',
-'Segoe UI',
-'Segoe UI Historic',
-'Segoe UI Emoji',
-'Segoe UI Symbol',
-'SimSun',
-'Sitka',
-'Sylfaen',
-'Symbol',
-'Tahoma',
-'Times New Roman',
-'Trebuchet MS',
-'Verdana',
-'Webdings',
-'Wingdings',
-'Yu Gothic',
+'Arial','Arial Black','Bahnschrift','Calibri','Cambria','Cambria Math','Candara','Comic Sans MS','Consolas','Constantia','Corbel','Courier New','Ebrima','Franklin Gothic Medium','Gabriola','Gadugi','Georgia','HoloLens MDL2 Assets','Impact','Ink Free','Javanese Text','Leelawadee UI','Lucida Console','Lucida Sans Unicode','Malgun Gothic','Marlett','Microsoft Himalaya','Microsoft JhengHei','Microsoft New Tai Lue','Microsoft PhagsPa','Microsoft Sans Serif','Microsoft Tai Le','Microsoft YaHei','Microsoft Yi Baiti','MingLiU-ExtB','Mongolian Baiti','MS Gothic','MV Boli','Myanmar Text','Nirmala UI','Palatino Linotype','Segoe MDL2 Assets','Segoe Print','Segoe Script','Segoe UI','Segoe UI Historic','Segoe UI Emoji','Segoe UI Symbol','SimSun','Sitka','Sylfaen','Symbol','Tahoma','Times New Roman','Trebuchet MS','Verdana','Webdings','Wingdings','Yu Gothic',
 ]
 
 
@@ -121,55 +63,56 @@ document.getElementById("bgcolor").addEventListener("change",colorPicker);
 
 
 // initialising function once the DOM loads
+
 function init() {
-    loadFontList(windowsFontList)
+    loadFontList(windowsFontList);
+    trash = document.querySelector(".fa-trash");
+    attachDragListeners(trash);
+//adds event listeners to each of the padding input rockers.
     for (i of textPadding){
-        paddingItem = document.getElementById(i.id)
-        console.log(i.id.slice(-1))
-        // document.i.srcElement.addEventListener("click",padding(i.id))
-        // padding(paddingItem,i.id)
-        paddingItem.addEventListener("click",whichSpacing)
+        paddingItem = document.getElementById(i.id);
+        paddingItem.addEventListener("click",whichSpacing);
     }
 }
 
 
 function whichSpacing(e) {
     if(e.srcElement.id =="paddingT"){
-    targetValue = (e.target.value/3) + "rem"
-    navbarArea.style.padding = targetValue
-    cssCodeString = "padding : " + targetValue
-    document.getElementById("cssPadding").innerText = cssCodeString
+    targetValue = (e.target.value/3) + "rem";
+    navbarArea.style.padding = targetValue;
+    cssCodeString = "padding : " + targetValue;
+    document.getElementById("cssPadding").innerText = cssCodeString;
     }
     else if (e.srcElement.id =="paddingR") {
         targetValue = (e.target.value/3) + "rem"
-        navbarArea.style.paddingRight = targetValue
-        cssCodeString = "padding : " + targetValue
-        document.getElementById("cssPadding").innerText = cssCodeString
+        navbarArea.style.paddingRight = targetValue;
+        cssCodeString = "padding : " + targetValue;
+        document.getElementById("cssPadding").innerText = cssCodeString;
     }
     else if (e.srcElement.id =="paddingL") {
-        targetValue = (e.target.value/3) + "rem"
-        navbarArea.style.paddingLeft = targetValue
-        cssCodeString = "padding : " + targetValue
-        document.getElementById("cssPadding").innerText = cssCodeString
+        targetValue = (e.target.value/3) + "rem";
+        navbarArea.style.paddingLeft = targetValue;
+        cssCodeString = "padding : " + targetValue;
+        document.getElementById("cssPadding").innerText = cssCodeString;
     }
     else if (e.srcElement.id =="letterS") {
-        targetValue = (e.target.value/3) + "rem"
-        navbarArea.style.letterSpacing = targetValue
-        cssCodeString = "letter-spacing : " + targetValue
-        document.getElementById("cssletterSpacing").innerText = cssCodeString
+        targetValue = (e.target.value/3) + "rem";
+        navbarArea.style.letterSpacing = targetValue;
+        cssCodeString = "letter-spacing : " + targetValue;
+        document.getElementById("cssletterSpacing").innerText = cssCodeString;
     }
 }
 
 function colorPicker(e) {
     if (e.srcElement.id == "bgcolor") {
         navbarArea.style.backgroundColor = e.target.value;
-        cssCodeString = "background-color : " + e.target.value
-        document.getElementById("cssbackgroundColor").innerText = cssCodeString
+        cssCodeString = "background-color : " + e.target.value;
+        document.getElementById("cssbackgroundColor").innerText = cssCodeString;
     }
     else {
-        navbarArea.style.color= e.target.value
-        cssCodeString = "color : " + e.target.value
-        document.getElementById("csscolor").innerText = cssCodeString
+        navbarArea.style.color= e.target.value;
+        cssCodeString = "color : " + e.target.value;
+        document.getElementById("csscolor").innerText = cssCodeString;
     }
 }
 
@@ -180,22 +123,22 @@ function align (e) {
     if(e.target.getAttribute("id")=="left"){
         navbarArea.style.justifyContent = "left";
         cssCodeString = "justify-content : left;"
-        document.getElementById("cssAlignment").innerText = cssCodeString
+        document.getElementById("cssAlignment").innerText = cssCodeString;
     }
     else if (e.target.getAttribute("id")=="center"){
         navbarArea.style.justifyContent = "center";
         cssCodeString = "justify-content : center;"
-        document.getElementById("cssAlignment").innerText = cssCodeString
+        document.getElementById("cssAlignment").innerText = cssCodeString;
     }
     else if (e.target.getAttribute("id")=="right"){
         navbarArea.style.justifyContent = "right";
         cssCodeString = "justify-content : right;"
-        document.getElementById("cssAlignment").innerText = cssCodeString
+        document.getElementById("cssAlignment").innerText = cssCodeString;
     }
     else if (e.target.getAttribute("id")=="fullwidth"){
         navbarArea.style.justifyContent = "space-between";
         cssCodeString = "justify-content : space-between;"
-        document.getElementById("cssAlignment").innerText = cssCodeString
+        document.getElementById("cssAlignment").innerText = cssCodeString;
     }
 }
 
@@ -209,8 +152,8 @@ function updateCssPanel () {
 function fontFamily(e) {
     targetValue = e.target.value
     navbarArea.style.fontFamily = targetValue;
-    cssCodeString = "font-family: " + targetValue
-    document.getElementById("cssfontFamily").innerText = cssCodeString
+    cssCodeString = "font-family: " + targetValue;
+    document.getElementById("cssfontFamily").innerText = cssCodeString;
 }
 
 // change text case function
@@ -219,17 +162,17 @@ function changeCase (e) {
     if(e.target.getAttribute("id")=="upper"){
         navbarArea.style.textTransform = "uppercase";
         cssCodeString = "text-transform : uppercase;"
-        document.getElementById("cssCase").innerText = cssCodeString
+        document.getElementById("cssCase").innerText = cssCodeString;
     }
     else if (e.target.getAttribute("id")=="lower"){
         navbarArea.style.textTransform = "lowercase";
         cssCodeString = "text-transform : lowercase;"
-        document.getElementById("cssCase").innerText = cssCodeString
+        document.getElementById("cssCase").innerText = cssCodeString;
     }
     else if (e.target.getAttribute("id")=="capitalize"){
         navbarArea.style.textTransform = "capitalize";
         cssCodeString = "text-transform : capitalize;"
-        document.getElementById("cssCase").innerText = cssCodeString
+        document.getElementById("cssCase").innerText = cssCodeString;
     }
 }
 
@@ -237,11 +180,15 @@ function changeCase (e) {
 
 function fontsizechange(e) {
     document.querySelector("p > span").innerHTML = e.target.value;
+    cssCodeString = "font-size : "+e.target.value + " px;"
+    document.getElementById("cssfontSize").innerText = cssCodeString;
     navbarArea.style.fontSize = e.target.value + "px";
 }
 
 function opacitychange(e) {
     navbarArea.style.opacity = e.target.value + "%";
+    cssCodeString = "opacity: "+e.target.value + "% ;"
+    document.getElementById("cssopacity").innerText = cssCodeString;
 }
 
 
@@ -251,29 +198,82 @@ function opacitychange(e) {
 function addNavItem(e) {
     e.preventDefault();
     if (navbarListNum < 5) {
-        newNavItem = document.getElementById('navbar-entries').value
-        navbarList.push([newNavItem.value,navbarListNum]);
-        listItem = document.createElement("li")
+        newNavItem = document.getElementById('navbar-entries').value;
+        navbarList.push([newNavItem,navbarListNum]);
+        listItem = document.createElement("li");
         listItem.innerHTML = newNavItem;
-        console.log(listItem)
-        navbarArea.appendChild(listItem)
-        navbarListNum++;
-        // document.createElement("li");
+        navbarArea.appendChild(listItem);
         htmlCodeString = "<li>"+newNavItem+"</li>";
 
         // On the screen it appears as an "li" element behind the scenes it is a "p" element
 
         htmlCodeStringElement = document.createElement("p");
-        htmlCodeStringElement.setAttribute("draggable",true)
-        htmlCodeStringElement.id = (navbarListNum);
+        htmlCodeStringElement.setAttribute("draggable",true);
+        htmlCodeStringElement.id = navbarListNum;
         htmlCodeStringElement.innerText = htmlCodeString;
-        htmlCodeSection.appendChild(htmlCodeStringElement)
+        attachDragListeners(htmlCodeStringElement);
+        htmlCodeSection.appendChild(htmlCodeStringElement);
+        document.getElementById('navbar-entries').value = " ";
+        document.getElementById('navbar-entries').focus();
+        navbarListNum++;
 } else {
     alert("Maximum number of navbar entries is 5")
 }
 }
 
+//drag listeners and list update
 
+function attachDragListeners(el) {
+    el.addEventListener("dragstart",()=> dragStartId = el.id);
+    // it is necessary to preventDefault on both enter and over drag events in order to allow a drop to take place.
+    el.addEventListener("dragover", (e)=> e.preventDefault());
+    el.addEventListener("dragenter",(e)=> {e.preventDefault(); el.classList.add("dragover")});
+    el.addEventListener("dragleave",()=> el.classList.remove("dragover"));
+    el.addEventListener("drop", updateNavItems);
+}
+
+function updateNavItems(e) {
+    e.target.classList.remove("dragover");
+    //deletion drop process
+    if(e.target.id == "trash"){
+        itemtoDelete = document.getElementById(`${dragStartId}`)
+        // this is to delete the entry in the mockup area. Gets nodelist from the ul id of navbar-mockup-list
+        mockupitemtoDelete = document.querySelectorAll("#navbar-mockup-list li")
+        itemtoDelete.remove();
+        mockupitemtoDelete[dragStartId].remove();
+        navbarList.splice(dragStartId,1);
+        navbarListNum --;
+        reIndexEntries()
+    e.target.classList.remove("dragover");}
+    //reordering drop process
+    else {
+        let codeList = document.querySelectorAll("#navbar-code-html p")
+        let changeTo = e.target.closest("p");
+        let ctDuplicate = e.target.closest("p").innerHTML;
+        let changeFrom = codeList[dragStartId];
+        changeTo.innerHTML = changeFrom.innerHTML
+        changeFrom.innerHTML = ctDuplicate;
+        reIndexEntries();
+        mockupList = document.querySelectorAll("#navbar-mockup-list li");
+        iter =0 
+        // for (i of mockupList) {
+        //     i.innerHTML = codeList[iter].innerText;
+        //     iter++
+        // }
+        for (i=0;i<mockupList.length;i++) {
+            mockupList[i].innerHTML = codeList[i].innerText;}
+
+    }
+}
+
+function reIndexEntries(){
+    let iter = 0;
+    const listEntries = document.querySelectorAll("#navbar-code-html p")
+    for (i of listEntries){
+        i.id = iter.toString();
+        iter++;
+    }
+}
 
 //loads the array of fonts into the select html elements
 
@@ -288,24 +288,23 @@ function loadFontList(list) {
 }
 
 
-function removeNavItem(e) {
-    navbarList.pop();
-    console.log(event.srcElement);
-    console.log(navbarList)
-    navbarArea.removeChild(navbarArea.lastElementChild)
-    if (navbarListNum > 0) {navbarListNum--;}
-}
+// function removeNavItem(e) {
+//     navbarList.pop();
+//     console.log(event.srcElement);
+//     console.log(navbarList)
+//     navbarArea.removeChild(navbarArea.lastElementChild)
+//     if (navbarListNum > 0) {navbarListNum--;}
+// }
 
 
-function deleteNavbarEntry(event){
-    console.log("del working")
-}
+// function deleteNavbarEntry(event){
+//     console.log("del working")
+// }
 
 // copy to clipboard function
 
 function copyToClipboard(e){
     if (e.target.getAttribute("id") == "copy-html") {
-        // console.log(document.querySelector("#navbar-code-html").innerText)
         clipboard = document.querySelector("#navbar-code-html").innerText;
         clipboard += "\n</nav>";
         navigator.clipboard.writeText(clipboard);
@@ -315,10 +314,9 @@ function copyToClipboard(e){
         navigator.clipboard.writeText(clipboard);
 
     }
+    alert("Copied!");
 
-
-    // for (i=0;i<=htmlCodeSection.length;i++){
-        
-    // }
 }
+
+
 

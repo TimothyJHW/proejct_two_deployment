@@ -28,17 +28,6 @@
     </div>
     
     <div id="dashboard">
-<!-- 
-        <div class="list-altering-icons">
-        <button id="plusButton" type = "submit">
-        <i class="fa-solid fa-square-plus"></i>
-        </button>
-
-        <button id="minusButton">
-            <i class="fa-regular fa-square-minus" id = "minusButton"></i>
-        </button>
-        </div>
-        <i class="fa-solid fa-trash-can"></i> -->
 
 <!-- Input nav bar items here -->
 
@@ -125,7 +114,7 @@
 <br>
     <label for="fontsize">Font Size</label>
     <input type="range" min="8" max="30" value="16" class="slider" id="fontsizerange">
-    <p>Font size: <span></span></p>
+    <p>Font size: <span></span> px</p>
     </form>
 </div>
 
@@ -155,7 +144,8 @@
             &ltnav&gt
             </div>
             &lt/nav&gt
-            <i class="fa-solid fa-copy" id = "copy-html"></i>    
+            <i class="fa-solid fa-copy" id = "copy-html"></i>
+            <i class="fa-solid fa-trash" id = "trash"></i>  
         </div>
 
         <div class = "code-div" id="code-div2">
@@ -164,15 +154,15 @@
                 nav{
                 <p id="cssDisplay">display: flex;</p>
                 <p id="cssAlignment">justify-content: right;</p>
-                <p id="cssPadding">padding: 0rem;</p>
+                <p id="cssPadding" dataset ="one">padding: 0rem;</p>
                 <p id="cssfontFamily">font-family: sans-serif;</p>
+                <p id="cssfontSize">font-size: ;</p>
                 <p id="cssCase">text-transform: lowercase;</p>
                 <p id="cssletterSpacing">letter-spacing: 0;</p>
                 <p id="cssopacity">opacity: 100%;</p>
                 <p id="cssbackgroundColor">background-color: #6f8090;</p>
                 <p id="csscolor">color: #fff;</p>
-
-            }
+                }
             </div>
  
             <i class="fa-solid fa-copy" id = "copy-css"></i>

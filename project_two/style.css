@@ -9,12 +9,13 @@
 
 body {
     background-color: darkgrey;
+    height:100vh;
 }
 
 input {
     color:
     white;
-    background-color: darkblue;
+    background-color: rgb(84, 135, 167);
     display:
     inline;
 }
@@ -36,9 +37,9 @@ header {
     text-decoration: underline;
     border-radius:5px;
     position:relative;
-    background-image: url('mick-haupt-tJefy_Vu7Po-unsplash.jpg');
-    background-position: left center;
-    background-size: cover;
+    background-image: url('aaron-burden-NXt5PrOb_7U-unsplash.jpg');
+    background-position: left 90% top 60%;
+    background-size:120%;
     background-repeat:no-repeat;
 }
 #thenavbar-space {
@@ -55,12 +56,9 @@ header {
     max-height:20vh;
     background:#6f8090;
     display: flex;
-    flex-direction:
-    row;
-    align-items:
-    center;
-    justify-content:
-    right;
+    flex-direction: row;
+    align-items:center;
+    justify-content: right;
 }
 
 #navbar-mockup ul li{
@@ -70,10 +68,6 @@ header {
     font-family:inherit;
     font-size:inherit;
     color:inherit;
-}
-
-.wrapper {
-    align-items:center;
 }
 
 #dashboard {
@@ -87,6 +81,10 @@ header {
     border-radius:10px;
     background-color: rgb(144, 166, 188);
     padding: 0.5rem 1rem;
+}
+
+.wrapper {
+    align-items:center;
 }
 
 #opacity {
@@ -104,12 +102,12 @@ header {
 }
 
 .code-div {
-    height:30vh;
+    height:35vh;
     width:50vw;
     position:absolute;
     border:3px white solid;
     color:white;
-    padding:0.5rem 0.5rem;
+    padding:0.5rem 1.5rem;
 }
 
 #code-div1 {
@@ -142,17 +140,24 @@ header {
     font-size: 2.25rem;
 }
 
+.fa-trash {
+    font-size: 2rem;
+    position:absolute;
+    right:5%;
+    top:25%;
+    transition: all .3s ease;
+}
+
 .list-altering-icons i {
     color:white;
     font-size:3rem;
 }
 
-#plusButton:hover {
-    background-color:green;
-    border:none;
+
+.dragover {
+    color:yellow;
 }
 
-#minusButton:hover {
-    background-color:red;
-    border:none;
+.dragrevert{
+    color:white;
 }
