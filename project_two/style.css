@@ -128,6 +128,10 @@ header {
     padding:.5rem;
 }
 
+.fa-square-check {
+    background-color:darkblue;
+}
+
 .fa-copy {
     font-size: 2rem;
     position:absolute;
@@ -148,16 +152,18 @@ header {
     transition: all .3s ease;
 }
 
-.list-altering-icons i {
-    color:white;
-    font-size:3rem;
-}
-
-
 .dragover {
     color:yellow;
 }
 
 .dragrevert{
     color:white;
+}
+
+.nav-entry {
+    max-width:15%;
+}
+
+#navbar-code-css {
+    font-size:.8rem;
 }

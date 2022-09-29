@@ -31,25 +31,20 @@
 
 <!-- Input nav bar items here -->
 
-        <form>
+    <form class = "nav-entry">
         <h3>Input Nav Entries Here</h3>
         <br>
         <input type="text" name="navinput" placeholder = "Type nav entry here" id="navbar-entries" required>
         <button type= "submit"  id ="addNavEntry">
-            <i class="fa-solid fa-square-check"></i>
+        <i class="fa-solid fa-square-check"></i>
         </button>
-        </form>
+        <br><br>
+        <p>
+        To change the navbar entries drag-and-drop the entries in the red code area below.
+        </p>
+    </form>
 
-<!-- Whether the user wants to use flexbox, grid or simple inline divs -->
-<!-- 
-        <label for="alignment">Choose where you want the navbar to appear.</label>
-        <label for="box-type" class = "flexgridordiv">How do you wish the navbar to be organised?</label>
-        <input type = "radio" name="flexgridordiv" id="fgd">
-        <label for="flex">Flex-Box</label>
-        <input type = "radio" name="flexgridordiv" id="fgd">
-        <label for="grid">Grid</label>
-        <input type = "radio" name="flexgridordiv" id="fgd">
-        <label for="div">Div</label> -->
+
 
 <!-- Alignment of the navbar: left, right, center or full width -->
 <div id="alignment-wrapper" class = "wrapper">
@@ -119,21 +114,23 @@
 </div>
 
 
-
 <!-- padding and spacing -->
 
 <div id="paddingandspacing-wrapper" class = "wrapper">
     <h3>Spacing</h3>
+    <h5>(pixels)</h5>
+
 <!-- Padding -->
         <br>
-            <label for="padding">Padding Top and Bottom</label>
-            <input type = "number" class = "padding" id="paddingT" min = 0 max = 6 value = 1>
+            <label for="padding">Padding Top and Bottom
+            </label>
+            <input type = "number" class = "padding" id="paddingT" min = 0 max = 30 value = 1>
             <label for="padding">Padding Right</label>
-            <input type = "number" class = "padding" id="paddingR" min = 0 max = 6 value = 1>
+            <input type = "number" class = "padding" id="paddingR" min = 0 max = 30 value = 1>
             <label for="padding">Padding Left</label>
-            <input type = "number" class = "padding" id="paddingL" min = 0 max = 6 value = 1>
+            <input type = "number" class = "padding" id="paddingL" min = 0 max = 30 value = 1>
             <label for="padding">Letter Spacing</label>
-            <input type = "number" class = "padding" id="letterS" min = 0 max = 6 value = 1>
+            <input type = "number" class = "padding" id="letterS" min = 0 max = 20 value = 1>
 </div>
 
 <!-- dashboard closing div -->
@@ -154,14 +151,15 @@
                 nav{
                 <p id="cssDisplay">display: flex;</p>
                 <p id="cssAlignment">justify-content: right;</p>
-                <p id="cssPadding" dataset ="one">padding: 0rem;</p>
-                <p id="cssfontFamily">font-family: sans-serif;</p>
-                <p id="cssfontSize">font-size: ;</p>
-                <p id="cssCase">text-transform: lowercase;</p>
-                <p id="cssletterSpacing">letter-spacing: 0;</p>
-                <p id="cssopacity">opacity: 100%;</p>
-                <p id="cssbackgroundColor">background-color: #6f8090;</p>
                 <p id="csscolor">color: #fff;</p>
+                <p id="cssbackgroundColor">background-color: #6f8090;</p>
+                <p id="cssopacity">opacity: 100%;</p>
+                <p id="cssfontFamily">font-family: sans-serif;</p>
+                <p id="cssCase">text-transform: lowercase;</p>
+                <p id="cssfontSize">font-size: ;</p>
+                <p id="cssPadding">padding: 0px;</p>
+                <p id="cssPaddingLR">padding-left: 0px;</p>
+                <p id="cssletterSpacing">letter-spacing: 0px;</p>
                 }
             </div>
  
