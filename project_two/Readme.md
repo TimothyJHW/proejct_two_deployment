@@ -8,4 +8,4 @@ The navbar entries are also modified from the code area by dragging entries eith
 
 The app does not cover all possible modifications available for a navbar and there is room for expansion, such as options for hamburger style menus or for outliers to the right or left while the rest of the navbar remains on the opposing side.
 
- ![screenshot](Screenshot 2022-09-29 221336.png)
+ ![screenshot](screenshot_2022_09_29_221336.png)
