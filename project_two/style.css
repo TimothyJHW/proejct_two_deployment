@@ -136,7 +136,7 @@ header {
 .fa-copy {
     font-size: 2rem;
     position:absolute;
-    right:5%;
+    right:7%;
     bottom:5%;
     transition: all .3s ease;
 }
@@ -148,7 +148,7 @@ header {
 .fa-trash {
     font-size: 2rem;
     position:absolute;
-    right:5%;
+    right:7%;
     top:25%;
     transition: all .3s ease;
 }
