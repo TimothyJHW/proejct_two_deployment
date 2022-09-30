@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Nav Bar Creator</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/55bf8bbec7.js" crossorigin="anonymous"></script>
+    
+    </head>
+    <body>
+        <header>
+        Nav Bar Creator
+        <i class="fa-solid fa-location-crosshairs"></i>
+        </header>
+    <div id="thenavbar-space">
+        <br>
+        <h4>Nav Bar Mockup</h4>
+        <br>
+        <div id="navbar-mockup" style = "display: flex;">
+            <ul id = "navbar-mockup-list">
+
+            </ul>
+        </div>
+    </div>
+    
+    <div id="dashboard">
+
+<!-- Input nav bar items here -->
+
+    <form class = "nav-entry">
+        <h3>Input Nav Entries Here</h3>
+        <br>
+        <input type="text" name="navinput" placeholder = "Type nav entry here" id="navbar-entries" required>
+        <button type= "submit"  id ="addNavEntry">
+        <i class="fa-solid fa-square-check"></i>
+        </button>
+        <br><br>
+        <p>
+        To change the navbar entries drag-and-drop the entries in the red code area below.
+        </p>
+    </form>
+
+
+
+<!-- Alignment of the navbar: left, right, center or full width -->
+<div id="alignment-wrapper" class = "wrapper">
+    <h3>Alignment</h3>
+    <br>
+    <form action="" id="align">
+        <input type = "radio" id="left">
+        <label for="alignment">Left</label>
+        <input type = "radio" id="center">
+        <label for="alignment">Center</label>
+        <input type = "radio" id="right">
+        <label for="alignment">Right</label>
+        <input type = "radio" id="fullwidth">
+        <label for="alignment">Full Width</label>
+    </form>
+</div>
+
+<!-- color -->
+<div id="color-wrapper" class = "wrapper">
+    <h3>Colors</h3>
+    <br>
+
+    <input type="color" id="bgcolor" name="bgcolor"
+           value="#708090">
+    <label for="bgcolor">Background Color</label>
+    <input type="color" id="txtcolor" name="txtcolor"
+            value="#FFFFFF">
+    <label for="txtcolor">Text Color</label>
+    <br>
+    <label for="opacity">Opacity</label>
+    <input type="range" min="0%" max="100%" value="100%" class="slider" id="opacityrange">
+
+    
+</div>
+
+<!-- typography wrapper -->
+<div id="typography-wrapper" class = "wrapper">
+    <h3>Typography</h3>
+
+<!-- font style -->
+
+    <br>
+    <label for="fontFamily">Font</label>
+    <select name="fontFamily" id="fontFamily">
+    <option value="serif">Serif</option>
+    <option value="sans-serif">Sans serif</option>
+    </select>
+    <br>
+
+<!-- uppercase, lowercase or capitalize -->
+
+    <form action="" id="case">
+    <input type = "radio" id="upper">
+    <label for="case">Uppercase</label>
+    <input type = "radio" id="lower">
+    <label for="case">Lowercase</label>
+    <input type = "radio" id="capitalize">
+    <label for="div">Capitalize</label>
+    </form>
+
+<!-- font size -->
+<br>
+    <label for="fontsize">Font Size</label>
+    <input type="range" min="8" max="30" value="16" class="slider" id="fontsizerange">
+    <p>Font size: <span></span> px</p>
+    </form>
+</div>
+
+
+<!-- padding and spacing -->
+
+<div id="paddingandspacing-wrapper" class = "wrapper">
+    <h3>Spacing</h3>
+    <h5>(pixels)</h5>
+
+<!-- Padding -->
+        <br>
+            <label for="padding">Padding Top and Bottom
+            </label>
+            <input type = "number" class = "padding" id="paddingT" min = 0 max = 30 value = 1>
+            <label for="padding">Padding Right</label>
+            <input type = "number" class = "padding" id="paddingR" min = 0 max = 30 value = 1>
+            <label for="padding">Padding Left</label>
+            <input type = "number" class = "padding" id="paddingL" min = 0 max = 30 value = 1>
+            <label for="padding">Letter Spacing</label>
+            <input type = "number" class = "padding" id="letterS" min = 0 max = 20 value = 1>
+</div>
+
+<!-- dashboard closing div -->
+</div> 
+        <div class="code-div" id="code-div1">
+            <h3>Nav Bar Code (HTML)</h3>
+            <div id="navbar-code-html">
+            &ltnav&gt
+            </div>
+            &lt/nav&gt
+            <i class="fa-solid fa-copy" id = "copy-html"></i>
+            <i class="fa-solid fa-trash" id = "trash"></i>  
+        </div>
+
+        <div class = "code-div" id="code-div2">
+            <h3>Nav Bar Code (CSS) </h3>
+            <div id="navbar-code-css">
+                nav{
+                <p id="cssDisplay">display: flex;</p>
+                <p id="cssAlignment">justify-content: right;</p>
+                <p id="csscolor">color: #fff;</p>
+                <p id="cssbackgroundColor">background-color: #6f8090;</p>
+                <p id="cssopacity">opacity: 100%;</p>
+                <p id="cssfontFamily">font-family: sans-serif;</p>
+                <p id="cssCase">text-transform: lowercase;</p>
+                <p id="cssfontSize">font-size: ;</p>
+                <p id="cssPadding">padding: 0px;</p>
+                <p id="cssPaddingLR">padding-left: 0px;</p>
+                <p id="cssletterSpacing">letter-spacing: 0px;</p>
+                }
+            </div>
+ 
+            <i class="fa-solid fa-copy" id = "copy-css"></i>
+
+        </div>
+        <script src="script.js" async defer></script>
+    </body>
+</html>

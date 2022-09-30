@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+*{
+    font-family: poppins, sans-serif;
+    box-sizing:border-box;
+    margin:0;
+    color:white;
+}
+
+body {
+    background-color: darkgrey;
+    height:100vh;
+}
+
+input {
+    color:
+    white;
+    background-color: rgb(84, 135, 167);
+    display:
+    inline;
+}
+label {
+    display:inline;
+}
+
+select {
+    color:white;
+    background-color: darkblue;
+}
+header {
+    font-size: 2rem;
+    font-weight: 500;
+    color:white;
+    text-align: center;
+    background-color: rgb(133, 73, 73);
+    padding:3rem;
+    text-decoration: underline;
+    border-radius:5px;
+    position:relative;
+    background-image: url('aaron_burden_NXt5PrOb_7U_unsplash.jpg');
+    background-position: left 90% top 60%;
+    background-size:120%;
+    background-repeat:no-repeat;
+}
+#thenavbar-space {
+    height:20vh;
+    width:100%;
+}
+
+#thenavbar-space h4 {
+    text-align: center;
+}
+
+#navbar-mockup-list {
+    min-height:5vh;
+    max-height:20vh;
+    background:#6f8090;
+    display: flex;
+    flex-direction: row;
+    align-items:center;
+    justify-content: right;
+}
+
+#navbar-mockup ul li{
+    text-decoration:none;
+    list-style:none;
+    padding-right:1rem;
+    font-family:inherit;
+    font-size:inherit;
+    color:inherit;
+}
+
+#dashboard {
+    display:flex;
+    justify-content: space-between;
+    padding:0 1rem;
+}
+
+#dashboard > * {
+    border:1px solid white;
+    border-radius:10px;
+    background-color: rgb(144, 166, 188);
+    padding: 0.5rem 1rem;
+}
+
+.wrapper {
+    align-items:center;
+}
+
+#opacity {
+    text-align:center;
+}
+
+#typography-wrapper, #alignment-wrapper, #color-wrapper, #paddingandspacing-wrapper {
+    display:flex;
+    flex-direction: column;
+}
+
+#bgcolor, #txtcolor {
+    background-color:transparent;
+    border:none;
+}
+
+.code-div {
+    height:35vh;
+    width:50vw;
+    position:absolute;
+    border:3px white solid;
+    color:white;
+    padding:0.5rem 1.5rem;
+}
+
+#code-div1 {
+    background-color:rgb(201, 68, 68);
+    left:0;
+    bottom:0;
+}
+
+#code-div2 {
+    background-color:rgb(59, 59, 113);
+    right:0;
+    bottom:0;
+}
+
+.code-div h3 {
+    text-align: center;
+    color:white;
+    padding:.5rem;
+}
+
+.fa-square-check {
+    background-color:darkblue;
+}
+
+.fa-copy {
+    font-size: 2rem;
+    position:absolute;
+    right:5%;
+    bottom:5%;
+    transition: all .3s ease;
+}
+.fa-copy:hover {
+    color:yellow;
+    font-size: 2.25rem;
+}
+
+.fa-trash {
+    font-size: 2rem;
+    position:absolute;
+    right:5%;
+    top:25%;
+    transition: all .3s ease;
+}
+
+.dragover {
+    color:yellow;
+}
+
+.dragrevert{
+    color:white;
+}
+
+.nav-entry {
+    max-width:15%;
+}
+
+#navbar-code-css {
+    font-size:.8rem;
+}
