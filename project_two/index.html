@@ -50,16 +50,16 @@
 <div id="alignment-wrapper" class = "wrapper">
     <h3>Alignment</h3>
     <br>
-    <form action="" id="align">
+    <div id="align">
         <input type = "radio" id="left">
-        <label for="alignment">Left</label>
+        <label for="left">Left</label>
         <input type = "radio" id="center">
-        <label for="alignment">Center</label>
+        <label for="center">Center</label>
         <input type = "radio" id="right">
-        <label for="alignment">Right</label>
+        <label for="right">Right</label>
         <input type = "radio" id="fullwidth">
-        <label for="alignment">Full Width</label>
-    </form>
+        <label for="fullwidth">Full Width</label>
+    </div>
 </div>
 
 <!-- color -->
@@ -74,8 +74,8 @@
             value="#FFFFFF">
     <label for="txtcolor">Text Color</label>
     <br>
-    <label for="opacity">Opacity</label>
-    <input type="range" min="0%" max="100%" value="100%" class="slider" id="opacityrange">
+    <label for="opacityrange">Opacity</label>
+    <input type="range" min="0" max="100" value="100" class="slider" id="opacityrange">
 
     
 </div>
@@ -96,21 +96,21 @@
 
 <!-- uppercase, lowercase or capitalize -->
 
-    <form action="" id="case">
-    <input type = "radio" id="upper">
-    <label for="case">Uppercase</label>
-    <input type = "radio" id="lower">
-    <label for="case">Lowercase</label>
-    <input type = "radio" id="capitalize">
-    <label for="div">Capitalize</label>
-    </form>
+    <div id="case">
+        <input type = "radio" id="upper">
+        <label for="upper">Uppercase</label>
+        <input type = "radio" id="lower">
+        <label for="lower">Lowercase</label>
+        <input type = "radio" id="capitalize">
+        <label for="capitalize">Capitalize</label>
+    </div>
 
 <!-- font size -->
 <br>
-    <label for="fontsize">Font Size</label>
+    <label for="fontsizerange">Font Size</label>
     <input type="range" min="8" max="30" value="16" class="slider" id="fontsizerange">
     <p>Font size: <span></span> px</p>
-    </form>
+
 </div>
 
 
@@ -122,14 +122,13 @@
 
 <!-- Padding -->
         <br>
-            <label for="padding">Padding Top and Bottom
-            </label>
+            <label for="paddingT">Padding Top and Bottom</label>
             <input type = "number" class = "padding" id="paddingT" min = 0 max = 30 value = 1>
-            <label for="padding">Padding Right</label>
+            <label for="paddingR">Padding Right</label>
             <input type = "number" class = "padding" id="paddingR" min = 0 max = 30 value = 1>
-            <label for="padding">Padding Left</label>
+            <label for="paddingL">Padding Left</label>
             <input type = "number" class = "padding" id="paddingL" min = 0 max = 30 value = 1>
-            <label for="padding">Letter Spacing</label>
+            <label for="letterS">Letter Spacing</label>
             <input type = "number" class = "padding" id="letterS" min = 0 max = 20 value = 1>
 </div>
 
@@ -138,9 +137,9 @@
         <div class="code-div" id="code-div1">
             <h3>Nav Bar Code (HTML)</h3>
             <div id="navbar-code-html">
-            &ltnav&gt
+            &lt;nav&gt;
             </div>
-            &lt/nav&gt
+            &lt;/nav&gt;
             <i class="fa-solid fa-copy" id = "copy-html"></i>
             <i class="fa-solid fa-trash" id = "trash"></i>  
         </div>
